@@ -1,0 +1,44 @@
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000;
+
+  &--only-mobile {
+    @include atLarge {
+      display: none;
+    }
+  }
+
+  &--address {
+    padding: 1.5rem 0.8rem;
+    text-transform: none;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+  }
+
+  &--address > * {
+    display: block;
+  }
+  &--address .address-label {
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  &--address .address-line-1 {
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  &--address .address-line-2 {
+    font-size: 1rem;
+  }
+}

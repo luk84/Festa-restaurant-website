@@ -1,0 +1,28 @@
+.social-icons {
+  > img {
+    height: 28px;
+    margin-right: 0.5rem;
+    opacity: 0.7;
+  }
+
+  // height: 28px;
+
+  // @include atMedium {
+  //   // margin-right: 1rem;
+  //   height: 35px;
+  //   position: absolute;
+  //   top: -120%;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
+
+  // > img {
+  //   height: 100%;
+  //   margin-right: 0.5rem;
+  //   opacity: 0.7;
+
+  //   @include atMedium {
+  //     margin-right: 1rem;
+  //   }
+  // }
+}
