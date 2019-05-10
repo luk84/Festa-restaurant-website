@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: 333; }
+
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000; }
+  @media (min-width: 1024px) {
+    .btn--only-mobile {
+      display: none; } }
+  .btn--address {
+    padding: 1.5rem 0.8rem;
+    text-transform: none;
+    text-align: center;
+    letter-spacing: 2px;
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid #fff; }
+  .btn--address > * {
+    display: block; }
+  .btn--address .address-label {
+    padding-bottom: 1rem;
+    font-weight: 700;
+    font-size: 2rem; }
+  .btn--address .address-line-1 {
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem; }
+  .btn--address .address-line-2 {
+    font-size: 1rem; }
+
+.wrapper {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 100%;
+  overflow: hidden; }
+
+.social-icons > img {
+  height: 28px;
+  margin-right: 0.5rem;
+  opacity: 0.7; }
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow: hidden; }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../dist/img/hero-image.jpg") no-repeat center center/cover;
+    z-index: -1; }
+  .hero__content {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    color: #fff; }
+  .hero__content-main {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%); }
+  .hero__title {
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4.8rem;
+    letter-spacing: 1px; }
+    @media (min-width: 768px) {
+      .hero__title {
+        margin-bottom: 1rem;
+        font-size: 6rem; } }
+    @media (min-width: 1366px) {
+      .hero__title {
+        font-size: 8rem; } }
+    .hero__title-part-wider-screen {
+      display: none; }
+      @media (min-width: 768px) {
+        .hero__title-part-wider-screen {
+          display: inline-block; } }
+    .hero__title-underline {
+      width: 60px;
+      height: 4px;
+      margin: auto;
+      background-color: #fff; }
+      @media (min-width: 768px) {
+        .hero__title-underline {
+          width: 100px;
+          height: 6px; } }
+      @media (min-width: 1366px) {
+        .hero__title-underline {
+          width: 140px;
+          height: 8px; } }
+  .hero__subtitle {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.4rem;
+    letter-spacing: 1px; }
+    @media (min-width: 768px) {
+      .hero__subtitle {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        font-size: 3.2rem; } }
+    @media (min-width: 1366px) {
+      .hero__subtitle {
+        margin-top: 2rem;
+        font-size: 4rem; } }
+  .hero__btn-mobile-larger .btn {
+    display: none; }
+    @media (min-height: 370px) {
+      .hero__btn-mobile-larger .btn {
+        display: inline-block; } }
+    @media (min-width: 768px) {
+      .hero__btn-mobile-larger .btn {
+        font-size: 2.4rem;
+        padding: 1.8rem 3.4rem; } }
+  .hero__phone-info {
+    display: none; }
+    @media (min-height: 400px) {
+      .hero__phone-info {
+        display: flex;
+        margin: 1rem auto 0;
+        justify-content: center;
+        align-items: center; } }
+    @media (min-width: 1024px) {
+      .hero__phone-info {
+        display: none; } }
+  .hero__phone-icon {
+    width: 37px;
+    height: 37px;
+    margin-right: 15px; }
+    @media (min-width: 768px) {
+      .hero__phone-icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 25px; } }
+  .hero__phone-number {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px; }
+    @media (min-width: 768px) {
+      .hero__phone-number {
+        font-size: 2.4rem; } }
+  .hero__scroll-icon {
+    display: none; }
+    @media (min-width: 1024px) {
+      .hero__scroll-icon {
+        display: inline-block;
+        width: 40px;
+        position: absolute;
+        bottom: -80%;
+        left: 50%;
+        transform: translateX(-50%); } }
+  .hero__content-additional {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .hero__working-hours {
+    display: none; }
+    @media (min-width: 768px) {
+      .hero__working-hours {
+        flex-grow: 1;
+        display: flex;
+        letter-spacing: 1px; } }
+    .hero__working-hours > div {
+      margin-right: 0.5rem;
+      text-align: left; }
+      @media (min-width: 1024px) {
+        .hero__working-hours > div {
+          margin-right: 2rem; } }
+  .hero__days {
+    margin: 0 0 1rem 0;
+    font-size: 1.6rem; }
+    @media (min-width: 1024px) {
+      .hero__days {
+        font-size: 1.8rem; } }
+  .hero__hours {
+    margin: 0;
+    font-size: 1.2rem; }
+    @media (min-width: 1024px) {
+      .hero__hours {
+        font-size: 1.4rem; } }
+  .hero__social-icons {
+    width: 80px; }
+    @media (min-width: 400px) {
+      .hero__social-icons {
+        width: auto; } }
+    @media (min-width: 1024px) {
+      .hero__social-icons {
+        margin-right: 2rem; } }

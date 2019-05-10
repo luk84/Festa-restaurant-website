@@ -148,7 +148,7 @@
     display: none;
 
     @include atLarge {
-      display: inline;
+      display: inline-block;
       width: 40px;
       position: absolute;
       bottom: -80%;
