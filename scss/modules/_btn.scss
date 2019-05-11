@@ -5,12 +5,28 @@
   letter-spacing: 2px;
   text-decoration: none;
   text-transform: uppercase;
+  border: 3px solid #fff;
   background-color: #fff;
   color: #000;
+  transition: 0.4s;
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+    border: 3px solid #fff;
+  }
 
   &--only-mobile {
     @include atLarge {
       display: none;
+    }
+  }
+
+  &--only-desktop {
+    display: none;
+
+    @include atLarge {
+      display: inline-block;
     }
   }
 
@@ -22,23 +38,49 @@
     background-color: transparent;
     color: #fff;
     border: 3px solid #fff;
+
+    @include atLarge {
+      padding: 1.5rem 2rem;
+    }
+
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
   }
 
   &--address > * {
     display: block;
+
+    @include atLarge {
+      text-align: left;
+    }
   }
+
   &--address .address-label {
     padding-bottom: 1rem;
     font-weight: 700;
     font-size: 2rem;
+
+    @include atXlarge {
+      font-size: 3.6rem;
+    }
   }
 
   &--address .address-line-1 {
     padding-bottom: 0.5rem;
     font-size: 1.2rem;
+
+    @include atXlarge {
+      font-size: 2rem;
+    }
   }
 
   &--address .address-line-2 {
     font-size: 1rem;
+
+    @include atXlarge {
+      font-size: 1.6rem;
+    }
   }
 }
