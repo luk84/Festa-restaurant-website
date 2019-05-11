@@ -17,6 +17,7 @@
   }
 
   &--is-expanded {
+    //remember to add fix so expanded close automaticaly on orientation change (check on iphone X)
     background-color: rgba($color: #000000, $alpha: 0.8);
     height: 250px;
   }
