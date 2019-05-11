@@ -88,7 +88,11 @@ img {
 .social-icons > img {
   height: 28px;
   margin-right: 0.5rem;
-  opacity: 0.7; }
+  opacity: 0.7;
+  transition: 0.4s;
+  cursor: pointer; }
+  .social-icons > img:hover {
+    opacity: 1; }
 
 .main-nav {
   display: inline-block; }
@@ -197,7 +201,7 @@ img {
         font-size: 4rem; } }
   .hero__btn-mobile-larger {
     display: none; }
-    @media (min-height: 370px) {
+    @media (min-height: 400px) {
       .hero__btn-mobile-larger {
         display: block; } }
     @media (min-width: 768px) {
@@ -249,6 +253,9 @@ img {
     display: flex;
     justify-content: space-around;
     align-items: center; }
+    @media (min-width: 1024px) {
+      .hero__content-additional {
+        padding: 0 10px; } }
   .hero__working-hours {
     display: none; }
     @media (min-width: 768px) {

@@ -97,7 +97,7 @@
   &__btn-mobile-larger {
     display: none;
 
-    @media (min-height: 370px) {
+    @media (min-height: 400px) {
       display: block;
     }
 
@@ -167,6 +167,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @include atLarge {
+      padding: 0 10px;
+    }
   }
 
   &__working-hours {
