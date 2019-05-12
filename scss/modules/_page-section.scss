@@ -3,6 +3,10 @@
     @include atMedium {
       display: flex;
       align-items: center;
+
+      &--reversed {
+        flex-direction: row-reverse;
+      }
     }
   }
 
@@ -27,7 +31,7 @@
     }
   }
 
-  &__temporary {
+  &__description {
     @include atMedium {
       font-size: 2rem;
     }
@@ -53,19 +57,22 @@
   }
 
   &__image {
-    width: 100%;
     min-height: 420px;
-    height: 100%;
     flex-grow: 1;
     flex-basis: 50%;
     background: no-repeat center center/cover;
+
+    @include atMedium {
+      min-height: 570px;
+      height: 100vh;
+    }
 
     &--about {
       background-image: url("../img/about-img.jpg");
     }
 
-    @include atMedium {
-      height: 100vh;
+    &--events {
+      background-image: url("../img/events-img.jpg");
     }
   }
 }
