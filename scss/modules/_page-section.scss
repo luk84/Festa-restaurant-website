@@ -1,0 +1,71 @@
+.page-section {
+  &__content {
+    @include atMedium {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    flex-basis: 50%;
+    @include atSmall {
+      padding: 0 3rem;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+
+    @include atMedium {
+      font-size: 3.2rem;
+    }
+
+    @include atXlarge {
+      font-size: 4rem;
+    }
+  }
+
+  &__temporary {
+    @include atMedium {
+      font-size: 2rem;
+    }
+
+    @include atXlarge {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__btn-container {
+    .btn {
+      @include atMedium {
+        margin-top: 1rem;
+        padding: 1.6rem 3.2rem;
+        font-size: 2.2rem;
+      }
+
+      @include atLarge {
+        padding: 1.8rem 3.4rem;
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    min-height: 420px;
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 50%;
+    background: no-repeat center center/cover;
+
+    &--about {
+      background-image: url("../img/about-img.jpg");
+    }
+
+    @include atMedium {
+      height: 100vh;
+    }
+  }
+}

@@ -1,11 +1,15 @@
+// settings etc
 @import "base/variables";
 @import "base/mixins";
 @import "base/global";
-
+//reusable blocks
 @import "modules/btn";
 @import "modules/wrapper";
+@import "modules/v-space";
 @import "modules/flex-container";
 @import "modules/social-icons";
 @import "modules/main-nav";
-@import "modules/hero";
+//home-page modules
 @import "modules/site-header";
+@import "modules/hero";
+@import "modules/page-section";
