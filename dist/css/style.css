@@ -146,6 +146,19 @@ p {
       .main-nav__link {
         font-size: 2.4rem; } }
 
+.working-hours {
+  text-align: left; }
+  .working-hours__days {
+    font-size: 1.6rem; }
+    @media (min-width: 1024px) {
+      .working-hours__days {
+        font-size: 1.8rem; } }
+  .working-hours__hours {
+    font-size: 1.2rem; }
+    @media (min-width: 1024px) {
+      .working-hours__hours {
+        font-size: 1.4rem; } }
+
 .site-header {
   position: fixed;
   top: 0;
@@ -367,31 +380,22 @@ p {
     @media (min-width: 1024px) {
       .hero__content-additional {
         padding: 0 10px; } }
-  .hero__working-hours {
+  .hero__working-hours .working-hours {
     display: none; }
     @media (min-width: 768px) {
-      .hero__working-hours {
+      .hero__working-hours .working-hours {
         flex-grow: 1;
         display: flex;
         letter-spacing: 1px; } }
-    .hero__working-hours > div {
-      margin-right: 0.5rem;
-      text-align: left; }
+    .hero__working-hours .working-hours__content {
+      margin-right: 0.5rem; }
       @media (min-width: 1024px) {
-        .hero__working-hours > div {
+        .hero__working-hours .working-hours__content {
           margin-right: 2rem; } }
-  .hero__days {
-    margin: 0 0 1rem 0;
-    font-size: 1.6rem; }
-    @media (min-width: 1024px) {
-      .hero__days {
-        font-size: 1.8rem; } }
-  .hero__hours {
-    margin: 0;
-    font-size: 1.2rem; }
-    @media (min-width: 1024px) {
-      .hero__hours {
-        font-size: 1.4rem; } }
+    .hero__working-hours .working-hours__days {
+      margin: 0 0 1rem 0; }
+    .hero__working-hours .working-hours__hours {
+      margin: 0; }
   .hero__social-icons {
     width: 80px; }
     @media (min-width: 400px) {

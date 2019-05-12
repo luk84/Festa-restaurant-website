@@ -1,0 +1,19 @@
+.working-hours {
+  text-align: left;
+
+  &__days {
+    font-size: 1.6rem;
+
+    @include atLarge {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__hours {
+    font-size: 1.2rem;
+
+    @include atLarge {
+      font-size: 1.4rem;
+    }
+  }
+}
