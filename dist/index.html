@@ -174,33 +174,34 @@
     </section>
 
     <footer class="site-footer">
-      <div class="wrapper">
+      <div class="wrapper v-space v-space--half-of-padding">
         <div class="site-footer__content">
           <img
             class="site-footer__logo"
             src="img/logo.svg"
             alt="Logo of the Restaurant"
           />
-          <!-- add container form nav if needed -->
-          <nav class="main-nav">
-            <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="" class="main-nav__link">Home</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="" class="main-nav__link">About</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="" class="main-nav__link">Events</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="" class="main-nav__link">Menu</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="" class="main-nav__link">Gallery</a>
-              </li>
-            </ul>
-          </nav>
+          <div class="site-footer__nav-container">
+            <nav class="main-nav">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="" class="main-nav__link">Home</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="" class="main-nav__link">About</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="" class="main-nav__link">Events</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="" class="main-nav__link">Menu</a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="" class="main-nav__link">Gallery</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
           <div class="site-footer__working-hours">
             <div class="working-hours">
               <div class="working-hours__content">
@@ -225,17 +226,21 @@
               <img src="img/icons/youtube-white.svg" alt="youtube icon" />
             </div>
           </div>
-          <a href="#" class="btn btn--address"
-            ><span class="address-label"
-              >Find Us <i class="fas fa-arrow-right"></i
-            ></span>
-            <span class="address-line-1">Via dei Serpenti, 87</span>
-            <span class="address-line-2">184 Roma RM, Italia</span>
-          </a>
+          <div class="site-footer__btn-container">
+            <a href="#" class="btn btn--address"
+              ><span class="address-label"
+                >Find Us <i class="fas fa-arrow-right"></i
+              ></span>
+              <span class="address-line-1">Via dei Serpenti, 87</span>
+              <span class="address-line-2">184 Roma RM, Italia</span>
+            </a>
+          </div>
         </div>
-        <div class="site__footer__copyrights">
-          Copyright &copy; 2019, This is a Fictional Website, All Rights
-          Reserved
+        <div class="site-footer__copyrights">
+          <p>
+            Copyright &copy; 2019, This is a Fictional Website, All Rights
+            Reserved
+          </p>
         </div>
       </div>
     </footer>

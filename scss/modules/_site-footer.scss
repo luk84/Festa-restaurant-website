@@ -1,0 +1,99 @@
+.site-footer {
+  background-color: $mainGray;
+  color: #fff;
+
+  &__content {
+    @include atMedium {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include atMedium {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__logo {
+    width: 180px;
+    display: block;
+    margin: 0 auto 2rem;
+
+    @include atMedium {
+      display: inline-block;
+      margin: 0;
+    }
+
+    @include atXlarge {
+      width: 200px;
+    }
+  }
+
+  &__nav-container {
+    font-size: 2rem;
+    text-align: center;
+    border-top: 1px dotted $lightGray;
+
+    @include atMedium {
+      display: none;
+    }
+  }
+
+  &__working-hours {
+    flex-grow: 1;
+
+    @include atMedium {
+      max-width: 320px;
+    }
+
+    .working-hours {
+      border-top: 1px dotted $lightGray;
+
+      @include atMedium {
+        border: none;
+      }
+
+      &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+      }
+
+      &__days {
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+
+      &__hours {
+        margin-bottom: 0;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__social-icons {
+    display: none;
+
+    @include atLarge {
+      display: block;
+    }
+  }
+
+  &__btn-container {
+    display: none;
+
+    @include atMedium {
+      display: block;
+    }
+  }
+
+  &__copyrights {
+    font-size: 1.2rem;
+    border-top: 1px dotted $lightGray;
+
+    p {
+      margin: 2rem 0 1rem;
+      text-align: center;
+    }
+  }
+}

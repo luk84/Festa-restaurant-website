@@ -191,30 +191,22 @@
 
     &__days {
       margin: 0 0 1rem 0;
+      font-size: 1.6rem;
+
+      @include atLarge {
+        font-size: 1.8rem;
+      }
     }
 
     &__hours {
       margin: 0;
+      font-size: 1.2rem;
+
+      @include atLarge {
+        font-size: 1.4rem;
+      }
     }
   }
-
-  // &__days {
-  //   margin: 0 0 1rem 0;
-  //   font-size: 1.6rem;
-
-  //   @include atLarge {
-  //     font-size: 1.8rem;
-  //   }
-  // }
-
-  // &__hours {
-  //   margin: 0;
-  //   font-size: 1.2rem;
-
-  //   @include atLarge {
-  //     font-size: 1.4rem;
-  //   }
-  // }
 
   &__social-icons {
     width: 80px;
