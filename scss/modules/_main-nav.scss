@@ -28,7 +28,7 @@
 
     //deos it even work on mobile if not add only to desktop?
     &:hover {
-      color: #048500;
+      color: $mainGreen;
     }
 
     @include atMedium {
