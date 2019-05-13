@@ -12,6 +12,7 @@
 
   &__hours {
     margin: 0;
+    line-height: 1.15;
 
     @include atLarge {
       font-size: 1.8rem;

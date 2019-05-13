@@ -2,7 +2,7 @@
   &__flag-line {
     max-width: 540px;
     height: 10px;
-    margin: 2rem auto 3rem;
+    margin: 2rem auto;
     background: linear-gradient(
       to right,
       $mainGreen 0,
@@ -34,12 +34,16 @@
     transition: 0.4s;
 
     @include atMedium {
-      margin: 5rem 2rem 0;
+      margin: 2rem 2rem 0;
 
       &:hover {
         box-shadow: 0 0 3px 3px;
         transform: scale(1.05);
       }
+    }
+
+    @include atLarge {
+      margin-top: 4rem;
     }
   }
 
