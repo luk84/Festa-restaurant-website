@@ -10,7 +10,7 @@ body {
   color: 333; }
 
 p {
-  line-height: 1.4;
+  line-height: 1.8;
   letter-spacing: 1px;
   text-align: justify; }
 
@@ -92,6 +92,8 @@ p {
   overflow: hidden; }
   .wrapper--half-page {
     max-width: 640px; }
+  .wrapper--gray {
+    background-color: #333; }
 
 .v-space {
   padding-top: 4rem;
@@ -423,6 +425,10 @@ p {
 
 .page-section {
   position: relative; }
+  .page-section--gray {
+    background-color: #333; }
+  .page-section--centered {
+    text-align: center; }
   @media (min-width: 768px) {
     .page-section__content {
       display: flex;
@@ -444,9 +450,10 @@ p {
     @media (min-width: 1366px) {
       .page-section__title {
         font-size: 4rem; } }
-    .page-section__title--capitalize-white {
-      text-transform: capitalize;
+    .page-section__title--white {
       color: #fff; }
+    .page-section__title--capitalize {
+      text-transform: capitalize; }
   .page-section__title-green {
     color: #62d62c; }
   .page-section__title-red {
@@ -493,6 +500,54 @@ p {
       background-image: url("../img/about-img.jpg"); }
     .page-section__image--events {
       background-image: url("../img/events-img.jpg"); }
+
+.home-dishes__flag-line {
+  max-width: 540px;
+  height: 10px;
+  margin: 2rem auto 3rem;
+  background: linear-gradient(to right, #048500 0, #048500 33.3%, #fff 33.3%, #fff 66.6%, #ce2b37 66.6%, #ce2b37 100%); }
+
+.home-dishes__cards {
+  padding: 0 2rem; }
+  @media (min-width: 768px) {
+    .home-dishes__cards {
+      display: flex;
+      justify-content: center;
+      padding: 0; } }
+
+.home-dishes__card {
+  max-width: 300px;
+  padding: 2.5rem;
+  margin: 4rem auto 3rem;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid #000;
+  transition: 0.4s; }
+  @media (min-width: 768px) {
+    .home-dishes__card {
+      margin: 5rem 2rem 0; }
+      .home-dishes__card:hover {
+        box-shadow: 0 0 3px 3px;
+        transform: scale(1.05); } }
+
+.home-dishes__dish-img {
+  border: 2px solid #333; }
+
+.home-dishes__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; }
+
+.home-dishes__dish-name {
+  margin: 1rem 0; }
+  @media (min-width: 1024px) {
+    .home-dishes__dish-name {
+      font-size: 1.8rem; } }
+
+.home-dishes__dish-price {
+  color: #048500;
+  font-weight: 700; }
 
 @media (min-width: 768px) {
   .gallery {

@@ -9,4 +9,8 @@
   &--half-page {
     max-width: 640px;
   }
+
+  &--gray {
+    background-color: $mainGray;
+  }
 }

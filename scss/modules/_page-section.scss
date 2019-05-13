@@ -1,5 +1,14 @@
 .page-section {
   position: relative;
+
+  &--gray {
+    background-color: $mainGray;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
   &__content {
     @include atMedium {
       display: flex;
@@ -31,9 +40,12 @@
       font-size: 4rem;
     }
 
-    &--capitalize-white {
-      text-transform: capitalize;
+    &--white {
       color: #fff;
+    }
+
+    &--capitalize {
+      text-transform: capitalize;
     }
   }
 
