@@ -47,6 +47,7 @@
     }
 
     .working-hours {
+      padding-top: 1rem;
       border-top: 1px dotted $lightGray;
 
       @include atMedium {
@@ -60,12 +61,10 @@
       }
 
       &__days {
-        margin-bottom: 0;
         font-weight: 500;
       }
 
       &__hours {
-        margin-bottom: 0;
         font-weight: 300;
       }
     }

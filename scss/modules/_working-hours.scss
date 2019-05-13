@@ -2,6 +2,7 @@
   text-align: left;
 
   &__days {
+    margin: 0;
     font-size: 1.6rem;
 
     @include atSmall {
@@ -10,6 +11,8 @@
   }
 
   &__hours {
+    margin: 0;
+
     @include atLarge {
       font-size: 1.8rem;
     }
