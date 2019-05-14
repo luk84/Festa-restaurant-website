@@ -216,6 +216,16 @@ p {
   @media (min-width: 1366px) {
     .features {
       margin-bottom: -2rem; } }
+  .features--events {
+    margin-top: 3rem; }
+    @media (min-width: 500px) {
+      .features--events {
+        padding: 3rem 4rem 0; } }
+    @media (min-width: 768px) {
+      .features--events {
+        justify-content: space-around;
+        margin-top: 3rem;
+        padding: 3rem 0 0; } }
   .features__item {
     padding: 2rem;
     flex-basis: 50%; }
@@ -229,6 +239,13 @@ p {
     @media (min-width: 1024px) {
       .features__item {
         display: flex; } }
+    .features__item--events {
+      display: block;
+      flex-basis: 40%;
+      padding: 0; }
+  .features__img {
+    display: block;
+    width: 100%; }
   .features__item-title {
     margin: 0 0 1rem 0; }
     @media (min-width: 768px) {
@@ -819,6 +836,8 @@ p {
     height: 100%;
     background: url("../img/hero-about-image.jpg") no-repeat center center/cover;
     z-index: -1; }
+  .hero-inner--events::before {
+    background-image: url("../img/hero-events-image.jpg"); }
   .hero-inner__content {
     position: relative;
     height: 100%;

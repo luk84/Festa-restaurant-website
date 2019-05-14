@@ -24,6 +24,12 @@
     z-index: -1;
   }
 
+  &--events {
+    &::before {
+      background-image: url("../img/hero-events-image.jpg");
+    }
+  }
+
   &__content {
     position: relative;
     height: 100%;
