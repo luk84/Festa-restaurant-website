@@ -150,11 +150,22 @@
 
     @include atLarge {
       display: inline-block;
-      width: 40px;
+      width: 25px;
       position: absolute;
-      bottom: -80%;
+      top: 65%;
       left: 50%;
       transform: translateX(-50%);
+      animation: scroll 1s alternate infinite;
+
+      @keyframes scroll {
+        100% {
+          transform: translate(-50%, 20px);
+        }
+      }
+    }
+
+    @include atXlarge {
+      width: 30px;
     }
   }
 

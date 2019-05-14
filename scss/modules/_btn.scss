@@ -30,6 +30,14 @@
     }
   }
 
+  &--block {
+    display: block;
+  }
+
+  &--rounded {
+    border-radius: 10px;
+  }
+
   &--address {
     padding: 1.5rem 0.8rem;
     text-transform: none;

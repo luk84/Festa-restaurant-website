@@ -23,6 +23,7 @@
   &__text {
     flex-grow: 1;
     flex-basis: 50%;
+
     @include atSmall {
       padding: 0 3rem;
     }
@@ -80,6 +81,11 @@
   &__description {
     @include atMedium {
       font-size: 2rem;
+
+      @media (max-height: 400px) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+      }
     }
 
     @include atXlarge {

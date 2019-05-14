@@ -21,10 +21,10 @@ galleryItems.forEach(function(item) {
   });
 });
 
-//reduce site-header size ofter scrolling
+//reduce size and darken site-header after scrolling
 window.addEventListener("scroll", function() {
   const scrollPosition = window.scrollY;
-  if (scrollPosition > 100) {
+  if (scrollPosition > 50) {
     siteHeader.classList.add("site-header--darker");
   } else if (siteHeader.classList.contains("site-header--darker")) {
     siteHeader.classList.remove("site-header--darker");

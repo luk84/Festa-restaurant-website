@@ -20,7 +20,7 @@
     @include atMedium {
       display: flex;
       justify-content: center;
-      padding: 0;
+      padding: 0 0 2rem;
     }
   }
 
@@ -34,7 +34,7 @@
     transition: 0.4s;
 
     @include atMedium {
-      margin: 2rem 2rem 0;
+      margin: 2rem;
 
       &:hover {
         box-shadow: 0 0 3px 3px;
@@ -43,7 +43,7 @@
     }
 
     @include atLarge {
-      margin-top: 4rem;
+      margin: 4rem 2rem;
     }
   }
 
@@ -69,5 +69,10 @@
   &__dish-price {
     color: $mainGreen;
     font-weight: 700;
+  }
+
+  &__btn-container {
+    margin: auto;
+    max-width: 540px;
   }
 }
