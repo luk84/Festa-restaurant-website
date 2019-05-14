@@ -43,5 +43,14 @@
     @include atXlarge {
       font-size: 2.4rem;
     }
+
+    &--current {
+      color: $mainGreen;
+
+      @include atMedium {
+        color: #fff;
+        border-color: #fff;
+      }
+    }
   }
 }

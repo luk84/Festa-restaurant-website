@@ -13,7 +13,7 @@
   &:hover {
     color: #fff;
     background-color: transparent;
-    border: 3px solid #fff;
+    // border: 3px solid #fff;
   }
 
   &--only-mobile {
@@ -45,7 +45,7 @@
     letter-spacing: 2px;
     background-color: transparent;
     color: #fff;
-    border: 3px solid #fff;
+    // border: 3px solid #fff;
 
     @include atLarge {
       padding: 1.5rem 2rem;
@@ -89,6 +89,43 @@
 
     @include atXlarge {
       font-size: 1.6rem;
+    }
+  }
+
+  &--address--simple {
+    padding: 1rem;
+    border-width: 1px;
+
+    .address-label {
+      padding: 0;
+      font-size: 1.4rem;
+
+      @include atXlarge {
+        font-size: 3.6rem;
+      }
+    }
+    .address-line-1 {
+      display: none;
+    }
+
+    .address-line-2 {
+      display: none;
+    }
+
+    @include atMedium {
+      padding: 1.5rem;
+      border-width: 3px;
+
+      .address-label {
+        padding-bottom: 1rem;
+      }
+      .address-line-1 {
+        display: block;
+      }
+
+      .address-line-2 {
+        display: block;
+      }
     }
   }
 

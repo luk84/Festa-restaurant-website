@@ -119,12 +119,29 @@
       height: 100vh;
     }
 
-    &--about {
+    &--home-about {
       background-image: url("../img/about-img.jpg");
     }
 
-    &--events {
+    &--home-events {
       background-image: url("../img/events-img.jpg");
+    }
+
+    &--page-about1 {
+      background-image: url("../img/chef-up.jpg");
+      min-height: 360px;
+      max-height: 500px;
+      margin-left: auto;
+      margin-bottom: -4rem;
+
+      @include atXlarge {
+        margin-bottom: -8rem;
+      }
+    }
+    &--page-about2 {
+      background-image: url("../img/page-about2.jpg");
+      min-height: 250px;
+      max-height: 500px;
     }
   }
 }

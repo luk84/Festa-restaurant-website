@@ -13,4 +13,11 @@
   &--gray {
     background-color: $mainGray;
   }
+
+  &--no-padding-atLarge {
+    @include atLarge {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }

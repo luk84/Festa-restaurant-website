@@ -1,0 +1,84 @@
+.hero-inner {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  overflow: hidden;
+
+  @include atMedium {
+    height: 60vh;
+  }
+
+  @media (max-height: 500px) {
+    height: 50vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/hero-about-image.jpg") no-repeat center center/cover;
+    z-index: -1;
+  }
+
+  &__content {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+
+    @include atSmall {
+      margin: 0 1rem;
+    }
+  }
+
+  &__title-container {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    @include atMedium {
+      margin-bottom: 0.5rem;
+      font-size: 4rem;
+    }
+
+    @include atXlarge {
+      font-size: 6rem;
+    }
+
+    &-underline {
+      width: 30px;
+      height: 2px;
+      margin: auto;
+      background-color: #fff;
+
+      @include atMedium {
+        width: 50px;
+        height: 4px;
+      }
+
+      @include atXlarge {
+        width: 80px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__btn-container {
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+  }
+}
