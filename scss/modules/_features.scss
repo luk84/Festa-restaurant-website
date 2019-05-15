@@ -74,14 +74,16 @@
     }
   }
 
-  &__icon svg {
-    width: 60px;
-    height: 60px;
+  &__icon {
+    svg {
+      width: 60px;
+      height: 60px;
 
-    @include atLarge {
-      margin-right: 3rem;
-      width: 80px;
-      height: 80px;
+      @include atLarge {
+        margin-right: 3rem;
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 }

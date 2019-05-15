@@ -30,6 +30,12 @@
     }
   }
 
+  &--menu {
+    &::before {
+      background-image: url("../img/hero-menu-image.jpg");
+    }
+  }
+
   &__content {
     position: relative;
     height: 100%;
@@ -78,6 +84,20 @@
       @include atXlarge {
         width: 80px;
         height: 6px;
+      }
+
+      &--menu {
+        transform: translateX(5px);
+        width: 40px;
+      }
+
+      @include atMedium {
+        width: 60px;
+      }
+
+      @include atXlarge {
+        transform: translateX(10px);
+        width: 100px;
       }
     }
   }
