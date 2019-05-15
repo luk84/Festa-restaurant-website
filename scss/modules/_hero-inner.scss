@@ -36,6 +36,12 @@
     }
   }
 
+  &--gallery {
+    &::before {
+      background-image: url("../img/hero-gallery-image.jpg");
+    }
+  }
+
   &__content {
     position: relative;
     height: 100%;

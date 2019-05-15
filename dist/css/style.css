@@ -704,7 +704,7 @@ p {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 6px;
-      grid-template-areas: "img1 img2" "img3 img2" "img3 img4"; }
+      grid-template-areas: "img1 img2" "img3 img2" "img3 img4" "img5 img6"; }
       .gallery:after {
         content: "";
         position: absolute;
@@ -714,7 +714,13 @@ p {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #fff; } }
+        background-color: #fff; }
+      .gallery--no-after::after {
+        content: none; } }
+  @media (min-width: 768px) and (min-width: 1024px) {
+    .gallery--3-columns-atLarge {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "img1 img2 img6" "img3 img2 img5" "img3 img4 img5"; } }
   .gallery__title-container {
     position: absolute;
     top: 0;
@@ -742,12 +748,18 @@ p {
       @media (min-width: 768px) {
         .gallery__item--1 .gallery__img {
           min-height: auto; } }
+    .gallery__item--1--no-overlay {
+      background-color: transparent; }
   .gallery__item--2 {
     grid-area: img2; }
   .gallery__item--3 {
     grid-area: img3; }
   .gallery__item--4 {
     grid-area: img4; }
+  .gallery__item--5 {
+    grid-area: img5; }
+  .gallery__item--6 {
+    grid-area: img6; }
   .gallery__img {
     position: relative;
     display: block;
@@ -846,6 +858,8 @@ p {
     background-image: url("../img/hero-events-image.jpg"); }
   .hero-inner--menu::before {
     background-image: url("../img/hero-menu-image.jpg"); }
+  .hero-inner--gallery::before {
+    background-image: url("../img/hero-gallery-image.jpg"); }
   .hero-inner__content {
     position: relative;
     height: 100%;
