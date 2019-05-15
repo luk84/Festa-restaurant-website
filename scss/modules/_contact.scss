@@ -1,0 +1,56 @@
+.contact {
+  text-align: center;
+
+  &__map {
+    height: 360px;
+    border: 1px solid $mainGray;
+    max-width: 1000px;
+    margin-bottom: 4rem;
+
+    @include atMedium {
+      height: 600px;
+      margin: 0 2rem 4rem;
+    }
+
+    @include atLarge {
+      margin: 0 auto 4rem;
+    }
+
+    @include atXlarge {
+      margin: 0 auto 8rem;
+    }
+  }
+
+  &__icon {
+    width: 60px;
+    margin: 0 auto 2rem;
+  }
+
+  &__form-container {
+    margin-top: 4rem;
+  }
+
+  &__form {
+    margin: 2rem;
+
+    @include atLarge {
+      margin-top: 4rem;
+    }
+  }
+  &__form-input {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+
+    &:last-of-type {
+      height: 100px;
+
+      @include atLarge {
+        height: 200px;
+      }
+    }
+  }
+}

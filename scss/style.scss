@@ -11,13 +11,15 @@
 @import "modules/main-nav";
 @import "modules/working-hours";
 @import "modules/features";
+@import "modules/contact";
 //home-page modules
 @import "modules/site-header";
 @import "modules/hero";
 @import "modules/page-section"; //reusable
 @import "modules/home-dishes";
-@import "modules/gallery";
+@import "modules/gallery"; //reusable
 @import "modules/site-footer";
 //inner pages
 @import "modules/hero-inner";
 @import "modules/menu";
+@import "modules/contact";

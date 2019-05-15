@@ -1,3 +1,16 @@
+// Initialize and add the map
+function initMap() {
+  // Your location
+  const loc = { lat: 41.8972249, lng: 12.4877412 };
+  // Centered map on location
+  const map = new google.maps.Map(document.querySelector(".contact__map"), {
+    zoom: 18,
+    center: loc
+  });
+  // The marker, positioned at location
+  const marker = new google.maps.Marker({ position: loc, map: map });
+}
+
 //Mobile menu
 const siteHeader = document.querySelector(".site-header"),
   menuIcon = document.querySelector(".site-header__menu-icon"),

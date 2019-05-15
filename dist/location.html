@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Festa | About Page</title>
+    <title>Festa | Location</title>
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
       rel="stylesheet"
@@ -45,11 +45,7 @@
                   <a href="about.html" class="main-nav__link">About</a>
                 </li>
                 <li class="main-nav__item">
-                  <a
-                    href="events.html"
-                    class="main-nav__link main-nav__link--current"
-                    >Events</a
-                  >
+                  <a href="events.html" class="main-nav__link">Events</a>
                 </li>
                 <li class="main-nav__item">
                   <a href="menu.html" class="main-nav__link">Menu</a>
@@ -67,70 +63,120 @@
       </div>
     </header>
 
-    <section class="hero-inner hero-inner--events">
+    <section class="hero-inner hero-inner--location hero-inner--lower">
       <div class="wrapper">
         <div class="hero-inner__content">
-          <div class="hero-inner__title-container">
-            <h1 class="hero-inner__title">Events</h1>
+          <div
+            class="hero-inner__title-container hero-inner__title-container--moved-lower"
+          >
+            <h1 class="hero-inner__title">
+              Location
+            </h1>
             <div class="hero-inner__title-underline"></div>
-          </div>
-
-          <div class="hero-inner__btn-container">
-            <a
-              href="location.html"
-              class="btn btn--address btn--address--simple"
-              ><span class="address-label"
-                >Find Us <i class="fas fa-arrow-right"></i
-              ></span>
-              <span class="address-line-1">Via dei Serpenti, 87</span>
-              <span class="address-line-2">184 Roma RM, Italia</span>
-            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="page-events">
-      <div class="page-section page-section--centered">
-        <div class="wrapper v-space v-space--doubled-atXlarge">
-          <h2 class="page-section__title">Full & Partial Restaurant Events</h2>
-          <p class="page-section__description">
-            We welcome groups to exclusively reserve Festa and treat their
-            guests to our exciting approach to modern bistronomy. We can
-            accommodate seated dinners of up to 70 people in our main dining
-            room.
-          </p>
-          <p class="page-section__description">
-            LARGE GROUP DINNER EVENTS- We can also accommodate smaller dinner
-            groups of 9 to 25 with a specially curated menu in the dining room.
-            Groups will be seated in our dining room at either one table (up to
-            18 guests) or multiple adjacent tables. A variety of dining options
-            are available from a family style communal feast to a seasonally
-            inspired tasting menu. Please contact us for more information. We
-            look forward to hosting you!
-          </p>
-          <div class="page-section__btn-container">
-            <a href="" class="btn btn--black">Inquire Now</a>
+    <section
+      id="page-contact"
+      class="contact v-space v-space--doubled-atXlarge"
+    >
+      <div class="wrapper">
+        <div class="contact__map"></div>
+      </div>
+      <div
+        class="features features--contact features--text-white features--bg-dark"
+      >
+        <div class="features__item features__item--contact">
+          <div class="features__icon">
+            <img
+              class="contact__icon"
+              src="img/icons/phone-white.svg"
+              alt="Phone Icon"
+            />
           </div>
-          <div class="features features--events">
-            <div class="features__item features__item--events">
-              <img
-                class="features__img"
-                src="img/main-dinning-room.jpg"
-                alt="Main Dinning Room"
-              />
-              <h3>Main Dinning Room</h3>
-            </div>
-
-            <div class="features__item features__item--events">
-              <img
-                class="features__img"
-                src="img/secondary-dinning-room.jpg"
-                alt="Secondary Dinning Room"
-              />
-              <h3>Secondary Dinning Room</h3>
-            </div>
+          <div class="features__text">
+            <h3 class="features__item-title features__item-title--contact">
+              (55) 555-564
+            </h3>
+            <p
+              class="page-section__description page-section__description--contact"
+            >
+              If you have any questions just call us.
+            </p>
           </div>
+        </div>
+        <div class="features__item features__item--contact">
+          <div class="features__icon">
+            <img
+              class="contact__icon"
+              src="img/icons/placeholder-white.svg"
+              alt="Location Icon"
+            />
+          </div>
+          <div class="features__text">
+            <h3 class="features__item-title features__item-title--contact">
+              Via dei Serpenti, 87<span>184 Roma RM, Italia</span>
+            </h3>
+            <p
+              class="page-section__description page-section__description--contact"
+            >
+              Simply click on the location and navigation will show you the way.
+              We have a free parking for our guests!
+            </p>
+          </div>
+        </div>
+        <div class="features__item features__item--contact">
+          <div class="features__icon">
+            <img
+              class="contact__icon"
+              src="img/icons/envelope-white.svg"
+              alt="Envelope Icon"
+            />
+          </div>
+          <div class="features__text">
+            <h3 class="features__item-title features__item-title--contact">
+              email@festa.com
+            </h3>
+            <p
+              class="page-section__description page-section__description--contact"
+            >
+              Feel free to email us your questions or even better just use form
+              below.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="contact__form-container">
+        <div class="wrapper">
+          <h2 class="page-section__title">Contact Us</h2>
+          <form class="contact__form">
+            <input
+              class="contact__form-input"
+              type="text"
+              name="name"
+              placeholder="Your Name"
+            />
+            <input
+              class="contact__form-input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <input
+              class="contact__form-input"
+              type="number"
+              name="phone"
+              placeholder="Phone"
+            />
+            <textarea
+              class="contact__form-input"
+              name="message"
+              placeholder="Message"
+            ></textarea>
+            <input class="btn btn--black" type="submit" value="Submit" />
+          </form>
         </div>
       </div>
     </section>
@@ -208,5 +254,11 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzL3OkFlVss6V_RZnPsEBoMuaq2-BtcvM&callback=initMap"
+      async
+      defer
+    ></script>
   </body>
 </html>

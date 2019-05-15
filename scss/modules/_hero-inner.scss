@@ -6,7 +6,11 @@
   overflow: hidden;
 
   @include atMedium {
-    height: 60vh;
+    height: 40vh;
+  }
+
+  @include atLarge {
+    height: 50vh;
   }
 
   @media (max-height: 500px) {
@@ -22,6 +26,22 @@
     height: 100%;
     background: url("../img/hero-about-image.jpg") no-repeat center center/cover;
     z-index: -1;
+  }
+
+  &--lower {
+    height: 16vh;
+
+    @include atMedium {
+      height: 20vh;
+    }
+
+    @include atLarge {
+      height: 30vh;
+    }
+
+    @media (max-height: 500px) {
+      height: 40vh;
+    }
   }
 
   &--events {
@@ -42,6 +62,12 @@
     }
   }
 
+  &--location {
+    &::before {
+      background-image: url("../img/hero-location-image.jpg");
+    }
+  }
+
   &__content {
     position: relative;
     height: 100%;
@@ -59,6 +85,10 @@
     left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
+
+    &--moved-lower {
+      top: 55%;
+    }
   }
 
   &__title {
