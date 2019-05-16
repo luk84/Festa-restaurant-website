@@ -1,7 +1,6 @@
 .menu {
   position: relative;
   height: 100vh;
-  overflow: hidden;
 
   @include atMedium {
     display: flex;
@@ -62,20 +61,72 @@
   }
 
   &__card {
-    //will finish later
-    display: none;
+    // display: none;
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 0;
     width: 100%;
+    min-height: 100vh;
     background-color: $mainGreen;
     z-index: 1;
     transition: all 0.5s;
   }
 
-  &__icon {
+  &__card-border {
+    height: 100%;
+    padding: 2rem 0;
+    border: 3px solid #000;
+
+    @include atLarge {
+      padding: 4rem 0;
+      border-width: 5px;
+    }
+  }
+
+  &__items {
+    text-align: center;
+    padding: 2rem 1rem 0;
+
+    @include atSmaller {
+      padding: 2rem 3rem 0;
+    }
+
+    @include atMedium {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    flex-basis: 40%;
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__item-icon {
+    margin: auto;
     width: 80px;
     border-radius: 50%;
+
+    @include atLarge {
+      width: 100px;
+    }
+  }
+
+  &__item-name {
+    display: flex;
+    justify-content: space-between;
+
+    @include atLarge {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__item-description {
+    @include atLarge {
+      font-size: 2rem;
+    }
   }
 }
