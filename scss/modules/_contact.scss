@@ -1,4 +1,5 @@
 .contact {
+  background: $lightGray;
   text-align: center;
 
   &__map {
@@ -45,7 +46,7 @@
     max-width: 600px;
     border-radius: 5px;
 
-    &:last-of-type {
+    &:nth-last-child(2) {
       height: 100px;
 
       @include atLarge {

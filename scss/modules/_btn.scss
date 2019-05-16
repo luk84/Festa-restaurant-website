@@ -8,6 +8,7 @@
   border: 3px solid #fff;
   background-color: #fff;
   color: #000;
+  cursor: pointer;
   transition: 0.4s;
 
   &:hover {
@@ -32,6 +33,7 @@
 
   &--block {
     display: block;
+    width: 100%; //input btn needs that
   }
 
   &--rounded {
