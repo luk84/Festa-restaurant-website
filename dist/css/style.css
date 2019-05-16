@@ -17,6 +17,14 @@ p {
   letter-spacing: 1px;
   text-align: justify; }
 
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important; }
+
+.preload {
+  display: none; }
+
 .btn {
   display: inline-block;
   padding: 1.5rem 3rem;
@@ -454,6 +462,26 @@ p {
     height: 100%;
     background: url("../img/hero-image.jpg") no-repeat center center/cover;
     z-index: -1; }
+    @media (min-width: 1024px) {
+      .hero::before {
+        animation: hero-image linear 20s infinite; } }
+
+@keyframes hero-image {
+  5% {
+    background-image: url("../img/hero-image.jpg"); }
+  25% {
+    background-image: url("../img/hero-image2.jpg"); }
+  30% {
+    background-image: url("../img/hero-image2.jpg"); }
+  50% {
+    background-image: url("../img/hero-image3.jpg");
+    transform: scale(1.05); }
+  55% {
+    background-image: url("../img/hero-image3.jpg"); }
+  75% {
+    background-image: url("../img/hero-image4.jpg"); }
+  80% {
+    background-image: url("../img/hero-image4.jpg"); } }
   .hero__content {
     position: relative;
     height: 100%;
@@ -571,7 +599,7 @@ p {
     left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; }
     @media (min-width: 1024px) {
       .hero__content-additional {
@@ -594,20 +622,23 @@ p {
       @media (min-width: 1024px) {
         .hero__working-hours .working-hours__days {
           font-size: 1.8rem; } }
+      @media (min-width: 1366px) {
+        .hero__working-hours .working-hours__days {
+          font-size: 2.2rem; } }
     .hero__working-hours .working-hours__hours {
       margin: 0;
       font-size: 1.2rem; }
       @media (min-width: 1024px) {
         .hero__working-hours .working-hours__hours {
           font-size: 1.4rem; } }
+      @media (min-width: 1366px) {
+        .hero__working-hours .working-hours__hours {
+          font-size: 1.8rem; } }
   .hero__social-icons {
     width: 80px; }
     @media (min-width: 400px) {
       .hero__social-icons {
         width: auto; } }
-    @media (min-width: 1024px) {
-      .hero__social-icons {
-        margin-right: 2rem; } }
 
 .page-section {
   position: relative; }
@@ -676,37 +707,37 @@ p {
       .page-section__description--contact {
         font-size: 2rem; } }
   @media (min-width: 768px) {
-    .page-section__description__btn-container .btn {
+    .page-section__btn-container .btn {
       margin-top: 1rem;
       padding: 1.6rem 3.2rem;
       font-size: 2.2rem; } }
   @media (min-width: 1024px) {
-    .page-section__description__btn-container .btn {
+    .page-section__btn-container .btn {
       padding: 1.8rem 3.4rem;
       font-size: 2.4rem; } }
-  .page-section__description__image {
+  .page-section__image {
     min-height: 420px;
     flex-grow: 1;
     flex-basis: 50%;
     background: no-repeat center center/cover; }
     @media (min-width: 768px) {
-      .page-section__description__image {
+      .page-section__image {
         min-height: 570px;
         height: 100vh; } }
-    .page-section__description__image--home-about {
+    .page-section__image--home-about {
       background-image: url("../img/about-img.jpg"); }
-    .page-section__description__image--home-events {
+    .page-section__image--home-events {
       background-image: url("../img/events-img.jpg"); }
-    .page-section__description__image--page-about1 {
+    .page-section__image--page-about1 {
       background-image: url("../img/chef-up.jpg");
       min-height: 360px;
       max-height: 500px;
       margin-left: auto;
       margin-bottom: -4rem; }
       @media (min-width: 1366px) {
-        .page-section__description__image--page-about1 {
+        .page-section__image--page-about1 {
           margin-bottom: -8rem; } }
-    .page-section__description__image--page-about2 {
+    .page-section__image--page-about2 {
       background-image: url("../img/page-about2.jpg");
       min-height: 250px;
       max-height: 500px; }

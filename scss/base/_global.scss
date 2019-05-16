@@ -24,3 +24,13 @@ p {
   letter-spacing: 1px;
   text-align: justify;
 }
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}
+
+.preload {
+  display: none;
+}
