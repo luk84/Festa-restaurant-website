@@ -326,6 +326,10 @@ p {
   .contact__icon {
     width: 60px;
     margin: 0 auto 2rem; }
+    @media (min-width: 1024px) {
+      .contact__icon {
+        width: 80px;
+        margin-bottom: 4rem; } }
   .contact__form-container {
     margin-top: 4rem; }
   .contact__form {
@@ -1079,7 +1083,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%); }
   .menu__card {
-    position: absolute;
+    display: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -1148,6 +1152,10 @@ p {
   .contact__icon {
     width: 60px;
     margin: 0 auto 2rem; }
+    @media (min-width: 1024px) {
+      .contact__icon {
+        width: 80px;
+        margin-bottom: 4rem; } }
   .contact__form-container {
     margin-top: 4rem; }
   .contact__form {
