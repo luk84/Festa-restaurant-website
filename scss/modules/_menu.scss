@@ -1,9 +1,13 @@
 .menu {
   position: relative;
-  height: 100vh;
 
-  @include atMedium {
-    display: flex;
+  &__categories {
+    position: relative;
+    height: 100vh;
+
+    @include atMedium {
+      display: flex;
+    }
   }
 
   &__category {
@@ -61,18 +65,53 @@
   }
 
   &__card {
-    display: none;
-    // position: absolute;
+    position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 0;
     min-height: 100vh;
-    background-color: $mainGreen;
-    z-index: 1;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 2;
     transition: all 0.5s;
+
+    &--mains {
+      left: 0;
+      background-color: $mainGreen;
+
+      &.is-active {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    &--desserts {
+      left: 50%;
+      background-color: #fff;
+
+      &.is-active {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    &--drinks {
+      right: 0;
+      background-color: $mainRed;
+
+      &.is-active {
+        width: 100%;
+        opacity: 1;
+      }
+    }
   }
+  // .is-active {
+  //   width: 100%;
+  //   opacity: 1;
+  // }
 
   &__card-border {
+    position: relative;
     height: 100%;
     padding: 2rem 0;
     border: 3px solid #000;
@@ -81,6 +120,13 @@
       padding: 4rem 0;
       border-width: 5px;
     }
+  }
+
+  &__card-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    cursor: pointer;
   }
 
   &__items {
