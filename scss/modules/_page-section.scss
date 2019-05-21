@@ -1,5 +1,6 @@
 .page-section {
   position: relative;
+  overflow: hidden;
 
   &--gray {
     background-color: $mainGray;
@@ -30,7 +31,7 @@
 
     //scrollApear animation
     opacity: 0;
-    transform: translateY(50px) scale(1.2);
+    transform: translateY(50px) scale(1.15);
     transition: all 0.7s ease-in-out;
 
     &--is-visible {

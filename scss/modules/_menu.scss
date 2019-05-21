@@ -34,8 +34,7 @@
     }
 
     &:hover::before {
-      //with transform scale had somestrange arefacts
-      height: 102%;
+      transform: scale(1.1);
     }
   }
 
@@ -107,10 +106,6 @@
       }
     }
   }
-  // .is-active {
-  //   width: 100%;
-  //   opacity: 1;
-  // }
 
   &__card-border {
     position: relative;

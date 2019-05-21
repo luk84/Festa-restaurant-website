@@ -1,3 +1,18 @@
+// removing loader
+window.addEventListener("load", function() {
+  const loader = document.querySelector(".loader");
+  loader.classList.add("loader__hidden");
+});
+
+//animations delay
+document.body.classList.add("js-loading");
+
+window.addEventListener("load", showPage);
+
+function showPage() {
+  document.body.classList.remove("js-loading");
+}
+
 // Initialize and add the map
 function initMap() {
   // Your location
