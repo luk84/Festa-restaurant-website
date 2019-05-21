@@ -661,10 +661,16 @@ p {
         flex-direction: row-reverse; } }
   .page-section__text {
     flex-grow: 1;
-    flex-basis: 50%; }
+    flex-basis: 50%;
+    opacity: 0;
+    transform: translateY(50px) scale(1.2);
+    transition: all 0.7s ease-in-out; }
     @media (min-width: 500px) {
       .page-section__text {
         padding: 0 3rem; } }
+    .page-section__text--is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1); }
   .page-section__title {
     margin: 0;
     text-transform: uppercase; }

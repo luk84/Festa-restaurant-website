@@ -27,6 +27,16 @@
     @include atSmall {
       padding: 0 3rem;
     }
+
+    //scrollApear animation
+    opacity: 0;
+    transform: translateY(50px) scale(1.2);
+    transition: all 0.7s ease-in-out;
+
+    &--is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   &__title {
