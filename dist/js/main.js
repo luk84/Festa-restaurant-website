@@ -26,11 +26,17 @@ menuIcon.addEventListener("click", function() {
 const galleryItems = document.querySelectorAll(".gallery__item");
 
 galleryItems.forEach(function(item) {
-  item.addEventListener("mouseover", function() {
+  const zoomBtn = document.createElement("a");
+  zoomBtn.className = "gallery__zoom-btn";
+  zoomBtn.appendChild(document.createTextNode("Zoom"));
+
+  item.addEventListener("mouseenter", function() {
     item.classList.add("is-active");
+    item.appendChild(zoomBtn);
   });
-  item.addEventListener("mouseout", function() {
+  item.addEventListener("mouseleave", function() {
     item.classList.remove("is-active");
+    item.removeChild(zoomBtn);
   });
 });
 

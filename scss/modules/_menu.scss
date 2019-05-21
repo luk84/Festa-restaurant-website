@@ -72,13 +72,14 @@
     opacity: 0;
     overflow: hidden;
     z-index: 2;
-    transition: all 0.5s;
+    transition: all 0.8s;
 
     &--mains {
-      left: 0;
+      left: 16.66%;
       background-color: $mainGreen;
 
       &.is-active {
+        left: 0;
         width: 100%;
         opacity: 1;
       }
@@ -96,10 +97,11 @@
     }
 
     &--drinks {
-      right: 0;
+      right: 16.66%;
       background-color: $mainRed;
 
       &.is-active {
+        right: 0;
         width: 100%;
         opacity: 1;
       }

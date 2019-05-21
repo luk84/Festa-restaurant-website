@@ -834,23 +834,27 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    z-index: 1; }
     @media (min-width: 768px) {
       .gallery__title-container {
         width: calc(50% - 3px);
         height: calc(33.33% - 3px); } }
+  .gallery__btn-container {
+    margin-top: 2rem; }
   .gallery__item {
+    position: relative;
     display: none;
     margin: 0; }
     @media (min-width: 768px) {
       .gallery__item {
         display: block; } }
     .gallery__item.is-active {
-      background-color: rgba(0, 0, 0, 0.6); }
+      background-color: rgba(0, 0, 0, 0.3); }
   .gallery__item--1 {
     display: block;
     grid-area: img1;
-    background-color: rgba(0, 0, 0, 0.6); }
+    background-color: rgba(0, 0, 0, 0.5); }
     .gallery__item--1 .gallery__img {
       min-height: 360px; }
       @media (min-width: 768px) {
@@ -875,6 +879,25 @@ p {
     height: 100%;
     object-fit: cover;
     z-index: -1; }
+  .gallery__zoom-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    line-height: 68px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    color: #fff;
+    background-color: #333;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.3s; }
+    .gallery__zoom-btn:hover {
+      transform: translate(-50%, -50%) scale(1.2); }
 
 .site-footer {
   background-color: #333;
@@ -1092,11 +1115,12 @@ p {
     opacity: 0;
     overflow: hidden;
     z-index: 2;
-    transition: all 0.5s; }
+    transition: all 0.8s; }
     .menu__card--mains {
-      left: 0;
+      left: 16.66%;
       background-color: #048500; }
       .menu__card--mains.is-active {
+        left: 0;
         width: 100%;
         opacity: 1; }
     .menu__card--desserts {
@@ -1107,9 +1131,10 @@ p {
         width: 100%;
         opacity: 1; }
     .menu__card--drinks {
-      right: 0;
+      right: 16.66%;
       background-color: #f00; }
       .menu__card--drinks.is-active {
+        right: 0;
         width: 100%;
         opacity: 1; }
   .menu__card-border {
