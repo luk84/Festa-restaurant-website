@@ -94,6 +94,27 @@
     </section>
 
     <section id="page-gallery" class="page-section">
+      <div class="slider__wrapper">
+        <div class="slider">
+          <img
+            src="img/gallery-photo-1.jpg"
+            class="slider__current-img"
+            alt="Current image"
+          />
+          <i
+            class="slider__btn slider__btn--prev fas fa-arrow-left"
+            id="prev-btn"
+          ></i>
+          <i
+            class="slider__btn slider__btn--next fas fa-arrow-right"
+            id="next-btn"
+          ></i>
+          <i
+            class="slider__btn slider__btn--close fas fa-times"
+            id="close-btn"
+          ></i>
+        </div>
+      </div>
       <div class="gallery gallery--no-after gallery--3-columns-atLarge">
         <figure
           class="gallery__item gallery__item--1 gallery__item--1--no-overlay"
@@ -203,5 +224,6 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>
