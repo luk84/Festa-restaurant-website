@@ -1,7 +1,7 @@
 //Opening and closing slider
 const pageGallery = document.getElementById("page-gallery"),
   sliderWrapper = document.querySelector(".slider__wrapper"),
-  closeBtn = document.getElementById("close-btn");
+  closeSliderBtn = document.getElementById("close-btn");
 
 pageGallery.addEventListener("click", function(e) {
   if (e.target.className === "gallery__zoom-btn") {
@@ -10,7 +10,7 @@ pageGallery.addEventListener("click", function(e) {
   }
 });
 
-closeBtn.addEventListener("click", function() {
+closeSliderBtn.addEventListener("click", function() {
   sliderWrapper.classList.remove("slider__wrapper--is-active");
 });
 
