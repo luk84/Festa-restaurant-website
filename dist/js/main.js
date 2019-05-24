@@ -114,10 +114,23 @@ modalCloseBtn.addEventListener("click", function() {
 });
 
 //scroller-top static after reaching bottom
-// const scrollerTop = document.querySelector(".scroller-top"),
-//   siteFooterPosition = document.querySelector(".site-footer").offsetTop;
+const scrollerTop = document.querySelector(".scroller-top"),
+  siteFooter = document.querySelector(".site-footer");
 
-// window.addEventListener("scroll", function(e) {
-//   console.log(siteFooterPosition);
-//   console.log(scrollerTop.offseTop);
-// });
+scrollerTop.style.display = "none";
+
+window.addEventListener("scroll", function() {
+  const maxScroll = document.body.offsetHeight - window.innerHeight;
+
+  if (window.scrollY > window.innerHeight / 5) {
+    scrollerTop.style.display = "block";
+  } else {
+    scrollerTop.style.display = "none";
+  }
+
+  if (window.scrollY - 50 > maxScroll - siteFooter.offsetHeight) {
+    scrollerTop.classList.add("scroller-top--reached-bottom");
+  } else {
+    scrollerTop.classList.remove("scroller-top--reached-bottom");
+  }
+});
