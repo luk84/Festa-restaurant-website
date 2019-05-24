@@ -1,7 +1,8 @@
 //Opening and closing slider
 const pageGallery = document.getElementById("page-gallery"),
   sliderWrapper = document.querySelector(".slider__wrapper"),
-  closeSliderBtn = document.getElementById("close-btn");
+  currentImage = document.querySelector(".slider__current-img"),
+  sliderCloseBtn = document.getElementById("slider-close-btn");
 
 pageGallery.addEventListener("click", function(e) {
   if (e.target.className === "gallery__zoom-btn") {
@@ -10,39 +11,52 @@ pageGallery.addEventListener("click", function(e) {
   }
 });
 
-closeSliderBtn.addEventListener("click", function() {
+sliderCloseBtn.addEventListener("click", function() {
   sliderWrapper.classList.remove("slider__wrapper--is-active");
 });
 
 // Switching images
-const currentImage = document.querySelector(".slider__current-img"),
-  imgs = document.querySelectorAll(".gallery__img"),
-  prevBtn = document.getElementById("prev-btn"),
-  nextBtn = document.getElementById("next-btn");
+const imgs = document.querySelectorAll(".gallery__img"),
+  prevBtn = document.getElementById("slider-prev-btn"),
+  nextBtn = document.getElementById("slider-next-btn");
 
-let current;
-imgs.forEach(function(img, index) {
-  if (img.src === currentImage.src) {
-    current = index;
+function switchImage(direction) {
+  let current;
+  imgs.forEach(function(img, index) {
+    if (img.src === currentImage.src) {
+      current = index;
+    }
+  });
+
+  if (direction === "right") {
+    if (current === imgs.length - 1) {
+      current = 0;
+      currentImage.src = imgs[current].src;
+    } else {
+      current++;
+      currentImage.src = imgs[current].src;
+    }
+  } else if (direction === "left") {
+    if (current === 0) {
+      current = imgs.length - 1;
+      currentImage.src = imgs[current].src;
+    } else {
+      current--;
+      currentImage.src = imgs[current].src;
+    }
   }
-});
+}
 
 nextBtn.addEventListener("click", function() {
-  if (current === imgs.length - 1) {
-    current = 0;
-    currentImage.src = imgs[current].src;
-  } else {
-    current++;
-    currentImage.src = imgs[current].src;
-  }
+  switchImage("right");
 });
-
 prevBtn.addEventListener("click", function() {
-  if (current === 0) {
-    current = imgs.length - 1;
-    currentImage.src = imgs[current].src;
-  } else {
-    current--;
-    currentImage.src = imgs[current].src;
+  switchImage("left");
+});
+document.addEventListener("keydown", function(e) {
+  if (sliderWrapper.classList.contains("slider__wrapper--is-active") && e.keyCode === 37) {
+    switchImage("left");
+  } else if (sliderWrapper.classList.contains("slider__wrapper--is-active") && e.keyCode === 39) {
+    switchImage("right");
   }
 });

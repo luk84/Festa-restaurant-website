@@ -44,7 +44,7 @@
               </ul>
             </nav>
             <div class="site-header__btn-container">
-              <a href="#" class="btn btn--only-desktop">Reservation</a>
+              <a href="#" id="reservation-btn1" class="btn btn--only-desktop">Reservation</a>
             </div>
           </div>
         </div>
@@ -74,12 +74,12 @@
       <div class="slider__wrapper">
         <div class="slider">
           <img src="img/gallery-photo-1.jpg" class="slider__current-img" alt="Current image" />
-          <i class="slider__btn slider__btn--prev fas fa-arrow-left" id="prev-btn"></i>
-          <i class="slider__btn slider__btn--next fas fa-arrow-right" id="next-btn"></i>
-          <i class="slider__btn slider__btn--close fas fa-times" id="close-btn"></i>
+          <i class="slider__btn slider__btn--prev fas fa-arrow-left" id="slider-prev-btn"></i>
+          <i class="slider__btn slider__btn--next fas fa-arrow-right" id="slider-next-btn"></i>
+          <i class="slider__btn slider__btn--close fas fa-times" id="slider-close-btn"></i>
         </div>
       </div>
-      <div class="gallery gallery--no-after gallery--3-columns-atLarge">
+      <div class="gallery gallery--b-line gallery--3-columns-atLarge">
         <figure class="gallery__item gallery__item--1 gallery__item--1--no-overlay">
           <img src="img/gallery-photo-1.jpg" alt="Salad with shrimps" class="gallery__img" />
         </figure>
@@ -160,11 +160,51 @@
         </div>
         <div class="site-footer__copyrights">
           <p>
-            Copyright &copy; 2019, This is a Fictional Website, All Rights Reserved
+            Copyright &copy; 2019, This is a Fictional Website, No Rights Reserved
           </p>
         </div>
       </div>
     </footer>
+    <div class="modal__wrapper">
+        <div class="modal">
+          <div class="wrapper v-space">
+            <div class="modal__content">
+              <h2 class="page-section__title page-section__title--b-margin">
+                Reservation
+              </h2>
+              <p>For larger groups 8+ please call (55) 555-564</p>
+              <form>
+                <select id="people-select" class="modal__input">
+                  <option value="label">--number of people--</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
+                <input type="date" class="modal__input" />
+                <select id="time-select" class="modal__input">
+                  <option value="label">--time--</option>
+                  <option value="12pm">12pm</option>
+                  <option value="1pm">1pm</option>
+                  <option value="2pm">2pm</option>
+                  <option value="3pm">3pm</option>
+                  <option value="4pm">4pm</option>
+                  <option value="5pm">5pm</option>
+                  <option value="6pm">6pm</option>
+                  <option value="7pm">7pm</option>
+                  <option value="8pm">8pm</option>
+                </select>
+                <input type="submit" class="btn btn--black" value="Reserve now" />
+              </form>
+              <i class="modal__close-x fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>

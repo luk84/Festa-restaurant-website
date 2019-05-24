@@ -27,13 +27,17 @@
     margin: 0 auto 2rem;
 
     @include atLarge {
-      width: 80px;
+      width: 70px;
       margin-bottom: 4rem;
     }
   }
 
   &__form-container {
     margin-top: 4rem;
+
+    @include atXlarge {
+      margin-top: 8rem;
+    }
   }
 
   &__form {

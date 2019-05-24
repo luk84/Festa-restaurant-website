@@ -1,13 +1,25 @@
-// scrollApear animation
+const items = document.querySelectorAll(
+  "#home-events .page-section__text, #home-about .page-section__text, #page-about .features__item, #page-contact .features__item"
+);
+
+//initial hide
+document.addEventListener("DOMContentLoaded", function() {
+  items.forEach(function(item) {
+    item.classList.add("scroll-apear");
+  });
+});
+
+//revealing items
 function scrollApear() {
-  const pageSectionTexts = document.querySelectorAll(".page-section__text");
   const screenPosition = window.innerHeight / 1.3;
 
-  pageSectionTexts.forEach(function(text) {
-    let textPosition = text.getBoundingClientRect().top;
+  items.forEach(function(item, index) {
+    let itemPosition = item.getBoundingClientRect().top;
 
-    if (textPosition < screenPosition) {
-      text.classList.add("page-section__text--is-visible");
+    if (itemPosition < screenPosition) {
+      setTimeout(function() {
+        item.classList.add("scroll-apear--is-visible");
+      }, index * 300);
     }
   });
 }

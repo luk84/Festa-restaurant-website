@@ -45,13 +45,34 @@ galleryItems.forEach(function(item) {
   zoomBtn.className = "gallery__zoom-btn";
   zoomBtn.appendChild(document.createTextNode("Zoom"));
 
-  item.addEventListener("mouseenter", function() {
+  const textOverlay = document.createElement("span");
+  textOverlay.className = "gallery__text-overlay";
+
+  item.addEventListener("mouseenter", function(e) {
     item.classList.add("is-active");
-    item.appendChild(zoomBtn);
+    if (e.target.parentElement.parentElement.id === "page-gallery") {
+      item.appendChild(zoomBtn);
+    } else {
+      if (e.target.classList.contains("gallery__item--2")) {
+        textOverlay.textContent = "Fresh";
+        textOverlay.style.color = "#62d62c";
+      } else if (e.target.classList.contains("gallery__item--3")) {
+        textOverlay.textContent = "Handmade";
+      } else if (e.target.classList.contains("gallery__item--4")) {
+        textOverlay.textContent = "Delicious";
+        textOverlay.style.color = "#ff4242";
+      }
+      item.appendChild(textOverlay);
+    }
   });
-  item.addEventListener("mouseleave", function() {
+
+  item.addEventListener("mouseleave", function(e) {
     item.classList.remove("is-active");
-    item.removeChild(zoomBtn);
+    if (e.target.parentElement.parentElement.id === "page-gallery") {
+      item.removeChild(zoomBtn);
+    } else {
+      item.removeChild(textOverlay);
+    }
   });
 });
 
@@ -74,36 +95,29 @@ function showPage() {
   document.body.classList.remove("js-loading");
 }
 
-//menu cards reveal
-const menuMains = document.querySelector(".menu__card--mains");
-const menuDesserts = document.querySelector(".menu__card--desserts");
-const menuDrinks = document.querySelector(".menu__card--drinks");
+//modal reveal
+const modalWrapper = document.querySelector(".modal__wrapper"),
+  reservationBtns = document.querySelectorAll(
+    "#reservation-btn1, #reservation-btn2"
+  ),
+  modalCloseBtn = document.querySelector(".modal__close-x");
 
-const btnMains = document.getElementById("btn-mains");
-const btnDesserts = document.getElementById("btn-desserts");
-const btnDrinks = document.getElementById("btn-drinks");
-
-const btnsCardClose = document.querySelectorAll(".menu__card-close");
-
-btnMains.addEventListener("click", function(e) {
-  menuMains.classList.add("is-active");
-  e.preventDefault();
-});
-
-btnDesserts.addEventListener("click", function(e) {
-  menuDesserts.classList.add("is-active");
-  e.preventDefault();
-});
-
-btnDrinks.addEventListener("click", function(e) {
-  menuDrinks.classList.add("is-active");
-  e.preventDefault();
-});
-
-btnsCardClose.forEach(function(btn) {
-  btn.addEventListener("click", function() {
-    menuMains.classList.remove("is-active");
-    menuDesserts.classList.remove("is-active");
-    menuDrinks.classList.remove("is-active");
+reservationBtns.forEach(function(btn) {
+  btn.addEventListener("click", function(e) {
+    modalWrapper.classList.add("modal__wrapper--is-visible");
+    e.preventDefault();
   });
 });
+
+modalCloseBtn.addEventListener("click", function() {
+  modalWrapper.classList.remove("modal__wrapper--is-visible");
+});
+
+//scroller-top static after reaching bottom
+// const scrollerTop = document.querySelector(".scroller-top"),
+//   siteFooterPosition = document.querySelector(".site-footer").offsetTop;
+
+// window.addEventListener("scroll", function(e) {
+//   console.log(siteFooterPosition);
+//   console.log(scrollerTop.offseTop);
+// });

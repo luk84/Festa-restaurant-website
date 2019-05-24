@@ -69,7 +69,9 @@
               </ul>
             </nav>
             <div class="site-header__btn-container">
-              <a href="#" class="btn btn--only-desktop">Reservation</a>
+              <a href="#" id="reservation-btn1" class="btn btn--only-desktop"
+                >Reservation</a
+              >
             </div>
           </div>
         </div>
@@ -89,7 +91,9 @@
             <h2 class="hero__subtitle">Because We Love Food</h2>
             <div class="hero__btn-mobile-larger">
               <!-- wrepped cause wanted extra sizes in mq -->
-              <a href="#" class="btn btn--only-mobile">Reservation</a>
+              <a href="#" id="reservation-btn2" class="btn btn--only-mobile"
+                >Reservation</a
+              >
             </div>
             <div class="hero__phone-info">
               <img
@@ -230,7 +234,7 @@
           </div>
         </div>
         <div class="home-dishes__btn-container">
-          <a href="#" class="btn btn--block btn--rounded">
+          <a href="menu.html" class="btn btn--block btn--rounded">
             Check Our Menu
           </a>
         </div>
@@ -249,7 +253,7 @@
             delicious<br />
             <span class="page-section__title-red">& handmade</span>
           </h2>
-          <h3 class="page-section__subtitle page-section__subtitle--white">
+          <h3 class="page-section__subtitle page-section__subtitle--white page-section__subtitle--none-atMedium">
             Check gallery of our finest dishes!
           </h3>
           <div class="gallery__btn-container">
@@ -271,7 +275,7 @@
         <figure class="gallery__item gallery__item--3">
           <img
             src="img/gallery-photo-3.jpg"
-            alt="Making pasta"
+            alt="Making Pasta"
             class="gallery__img"
           />
         </figure>
@@ -286,6 +290,7 @@
     </section>
 
     <footer class="site-footer">
+      <!-- <a href="#" class="scroller-top scroller-top--reached-bottom"></a> -->
       <div class="wrapper v-space v-space--half-of-padding">
         <div class="site-footer__content">
           <img
@@ -350,12 +355,52 @@
         </div>
         <div class="site-footer__copyrights">
           <p>
-            Copyright &copy; 2019, This is a Fictional Website, All Rights
+            Copyright &copy; 2019, This is a Fictional Website, No Rights
             Reserved
           </p>
         </div>
       </div>
     </footer>
+    <div class="modal__wrapper">
+      <div class="modal">
+        <div class="wrapper v-space">
+          <div class="modal__content">
+            <h2 class="page-section__title page-section__title--b-margin">
+              Reservation
+            </h2>
+            <p>For larger groups 8+ please call (55) 555-564</p>
+            <form>
+              <select id="people-select" class="modal__input">
+                <option value="label">--number of people--</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+              <input type="date" class="modal__input" />
+              <select id="time-select" class="modal__input">
+                <option value="label">--time--</option>
+                <option value="12pm">12pm</option>
+                <option value="1pm">1pm</option>
+                <option value="2pm">2pm</option>
+                <option value="3pm">3pm</option>
+                <option value="4pm">4pm</option>
+                <option value="5pm">5pm</option>
+                <option value="6pm">6pm</option>
+                <option value="7pm">7pm</option>
+                <option value="8pm">8pm</option>
+              </select>
+              <input type="submit" class="btn btn--black" value="Reserve now" />
+            </form>
+            <i class="modal__close-x fas fa-times"></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
     <script src="js/scrollApear.js"></script>
