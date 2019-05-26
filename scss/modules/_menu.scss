@@ -73,25 +73,11 @@
     overflow: hidden;
     z-index: 2;
     transition: all 0.8s;
-    background-color: #fff;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-    }
 
     &--mains {
       @include atMedium {
         left: 16.66%;
-      }
-
-      &::after {
-        background-color: rgba($mainGreen, $alpha: 0.75);
+        background-color: $mainGreen;
       }
 
       &.is-active {
@@ -102,6 +88,8 @@
     }
 
     &--desserts {
+      background-color: #fff;
+
       &.is-active {
         left: 0;
         width: 100%;
@@ -112,12 +100,10 @@
     &--drinks {
       right: 50%;
       left: auto;
+      background-color: $mainRed;
 
       @include atMedium {
         right: 16.66%;
-      }
-      &::after {
-        background-color: rgba($mainRed, $alpha: 0.9);
       }
 
       &.is-active {
@@ -133,6 +119,7 @@
     height: 100%;
     padding: 2rem 0;
     border: 3px solid #000;
+    background-color: #fff;
 
     @include atLarge {
       padding: 4rem 0;
@@ -172,6 +159,7 @@
   &__item-icon {
     margin: auto;
     width: 80px;
+    border: 2px solid;
     border-radius: 50%;
 
     @include atLarge {

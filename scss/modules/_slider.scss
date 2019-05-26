@@ -51,7 +51,12 @@
     color: #fff;
     background-color: #000;
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 0.5;
+    transition: 0.2s linear;
+
+    &:hover {
+      opacity: 1;
+    }
 
     @include atMedium {
       width: 22px;
@@ -80,8 +85,12 @@
     top: 5%;
     left: 96%;
     color: #000;
-    background-color: #fff;
+    background-color: $lightGray;
     opacity: 1;
+
+    &:hover {
+      filter: brightness(80%);
+    }
 
     @include atMedium {
       top: 0;

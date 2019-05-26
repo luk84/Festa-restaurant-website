@@ -413,7 +413,10 @@ p {
     color: #fff;
     background-color: #000;
     cursor: pointer;
-    opacity: 0.7; }
+    opacity: 0.5;
+    transition: 0.2s linear; }
+    .slider__btn:hover {
+      opacity: 1; }
     @media (min-width: 768px) {
       .slider__btn {
         width: 22px;
@@ -434,8 +437,10 @@ p {
     top: 5%;
     left: 96%;
     color: #000;
-    background-color: #fff;
+    background-color: #f5f5f5;
     opacity: 1; }
+    .slider__btn--close:hover {
+      filter: brightness(80%); }
     @media (min-width: 768px) {
       .slider__btn--close {
         top: 0;
@@ -498,19 +503,27 @@ p {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 43px;
-  height: 43px;
+  width: 35px;
+  height: 35px;
   background-color: #048500;
   border-radius: 50%;
   box-sizing: content-box;
   z-index: 1;
-  opacity: 0.4;
-  transition: 0.3s linear; }
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear; }
+  @media (min-width: 768px) {
+    .scroller-top {
+      width: 43px;
+      height: 43px; } }
+  .scroller-top--is-active {
+    opacity: 0.4;
+    visibility: visible; }
   @media (min-width: 768px) {
     .scroller-top--reached-bottom {
       position: absolute;
       top: -3px;
-      left: 50%;
+      bottom: auto;
       transform: translate(-50%, -50%);
       border: 6px solid #fff;
       opacity: 1; } }
@@ -1347,37 +1360,28 @@ p {
     opacity: 0;
     overflow: hidden;
     z-index: 2;
-    transition: all 0.8s;
-    background-color: #fff; }
-    .menu__card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1; }
+    transition: all 0.8s; }
     @media (min-width: 768px) {
       .menu__card--mains {
-        left: 16.66%; } }
-    .menu__card--mains::after {
-      background-color: rgba(4, 133, 0, 0.75); }
+        left: 16.66%;
+        background-color: #048500; } }
     .menu__card--mains.is-active {
       left: 0;
       width: 100%;
       opacity: 1; }
-    .menu__card--desserts.is-active {
-      left: 0;
-      width: 100%;
-      opacity: 1; }
+    .menu__card--desserts {
+      background-color: #fff; }
+      .menu__card--desserts.is-active {
+        left: 0;
+        width: 100%;
+        opacity: 1; }
     .menu__card--drinks {
       right: 50%;
-      left: auto; }
+      left: auto;
+      background-color: #f00; }
       @media (min-width: 768px) {
         .menu__card--drinks {
           right: 16.66%; } }
-      .menu__card--drinks::after {
-        background-color: rgba(255, 0, 0, 0.9); }
       .menu__card--drinks.is-active {
         right: 0;
         width: 100%;
@@ -1386,7 +1390,8 @@ p {
     position: relative;
     height: 100%;
     padding: 2rem 0;
-    border: 3px solid #000; }
+    border: 3px solid #000;
+    background-color: #fff; }
     @media (min-width: 1024px) {
       .menu__card-border {
         padding: 4rem 0;
@@ -1414,6 +1419,7 @@ p {
   .menu__item-icon {
     margin: auto;
     width: 80px;
+    border: 2px solid;
     border-radius: 50%; }
     @media (min-width: 1024px) {
       .menu__item-icon {
