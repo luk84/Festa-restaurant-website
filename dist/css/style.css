@@ -1359,16 +1359,16 @@ p {
     min-height: 100vh;
     opacity: 0;
     overflow: hidden;
-    z-index: 2;
-    transition: all 0.8s; }
-    @media (min-width: 768px) {
-      .menu__card--mains {
-        left: 16.66%;
-        background-color: #048500; } }
-    .menu__card--mains.is-active {
-      left: 0;
-      width: 100%;
-      opacity: 1; }
+    transition: all 0.6s linear; }
+    .menu__card--mains {
+      background-color: #048500; }
+      @media (min-width: 768px) {
+        .menu__card--mains {
+          left: 16.66%; } }
+      .menu__card--mains.is-active {
+        left: 0;
+        width: 100%;
+        opacity: 1; }
     .menu__card--desserts {
       background-color: #fff; }
       .menu__card--desserts.is-active {
