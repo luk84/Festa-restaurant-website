@@ -28,7 +28,7 @@
     }
 
     @include atMedium {
-      font-size: 2rem;
+      font-size: 1.8rem;
 
       &:hover {
         color: #fff;
@@ -37,7 +37,7 @@
     }
 
     @include atXlarge {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
 
     &--current {

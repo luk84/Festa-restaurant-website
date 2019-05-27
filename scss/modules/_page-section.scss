@@ -35,11 +35,11 @@
     text-transform: uppercase;
 
     @include atMedium {
-      font-size: 3.2rem;
+      font-size: 3rem;
     }
 
     @include atXlarge {
-      font-size: 4rem;
+      font-size: 3.6rem;
     }
 
     &--white {
@@ -77,11 +77,11 @@
     font-weight: 300;
 
     @include atMedium {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
     }
 
     @include atXlarge {
-      font-size: 3.2rem;
+      font-size: 3rem;
     }
 
     &--white {
@@ -100,41 +100,17 @@
   }
 
   &__description {
-    @include atMedium {
-      font-size: 2rem;
-
-      @media (max-height: 400px) {
-        font-size: 1.6rem;
-        line-height: 1.2;
-      }
+    @include atLarge {
+      line-height: 2;
     }
 
     @include atXlarge {
-      font-size: 2.4rem;
-    }
-
-    &--contact {
-      text-align: center;
-
-      @include atLarge {
-        font-size: 2rem;
-      }
+      font-size: 1.8rem;
     }
   }
 
   &__btn-container {
-    .btn {
-      @include atMedium {
-        margin-top: 1rem;
-        padding: 1.6rem 3.2rem;
-        font-size: 2.2rem;
-      }
-
-      @include atLarge {
-        padding: 1.8rem 3.4rem;
-        font-size: 2.4rem;
-      }
-    }
+    margin-top: 5rem;
   }
 
   &__image {

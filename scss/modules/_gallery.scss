@@ -47,6 +47,10 @@
 
   &__btn-container {
     margin-top: 2rem;
+
+    @include atLarge {
+      margin-top: 4rem;
+    }
   }
 
   &__item {

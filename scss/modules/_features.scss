@@ -1,15 +1,12 @@
 .features {
   padding-top: 1rem;
+  overflow: hidden;
 
   @include atMedium {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 4rem;
-  }
-
-  @include atXlarge {
-    margin-bottom: -2rem;
   }
 
   &--events {
@@ -54,7 +51,7 @@
 
   &__item {
     padding: 2rem;
-    flex-basis: 50%;
+    flex-basis: 45%;
 
     &:last-child {
       padding-bottom: 0;
@@ -70,6 +67,10 @@
 
     @include atLarge {
       display: flex;
+    }
+
+    @include atXlarge {
+      flex-basis: 40%;
     }
 
     &--events {
@@ -97,7 +98,7 @@
     margin: 0 0 1rem 0;
 
     @include atMedium {
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
 
     @include atLarge {
@@ -105,7 +106,7 @@
     }
 
     @include atXlarge {
-      font-size: 2.6rem;
+      font-size: 2.2rem;
     }
 
     &--contact {
@@ -113,15 +114,20 @@
     }
   }
 
+  &__item-description--center {
+    text-align: center;
+  }
+
   &__icon {
     svg {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
 
       @include atLarge {
-        margin-right: 3rem;
-        width: 80px;
-        height: 80px;
+        margin-top: -1.7rem;
+        margin-right: 2rem;
+        width: 60px;
+        height: 60px;
       }
     }
   }

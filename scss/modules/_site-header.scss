@@ -24,7 +24,7 @@
 
     @include atMedium {
       .site-header__logo {
-        transform: scale(0.7);
+        transform: scale(0.6);
       }
       .site-header__menu-content {
         transform: scale(0.8);
@@ -130,7 +130,7 @@
 
     @include atMedium {
       position: static;
-      transform: scale(1);
+      transform: none;
       text-align: right;
     }
   }
@@ -141,8 +141,8 @@
 
     @include atXlarge {
       .btn {
-        font-size: 2.4rem;
-        padding: 1.8rem 3.4rem;
+        font-size: 2rem;
+        padding: 1.5rem 2.4rem;
       }
     }
   }

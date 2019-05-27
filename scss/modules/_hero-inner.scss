@@ -29,14 +29,14 @@
   }
 
   &--lower {
-    height: 16vh;
+    height: 18vh;
 
     @include atMedium {
-      height: 20vh;
+      height: 24vh;
     }
 
     @include atLarge {
-      height: 30vh;
+      height: 33vh;
     }
 
     @media (max-height: 500px) {

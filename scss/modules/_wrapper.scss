@@ -7,7 +7,9 @@
   overflow: hidden;
 
   &--half-page {
-    max-width: 640px;
+    max-width: 540px;
+    // padding-left: 40px;
+    // padding-right: 40px;
   }
 
   &--gray {

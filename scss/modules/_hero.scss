@@ -73,7 +73,7 @@
     }
 
     @include atXlarge {
-      font-size: 8rem;
+      font-size: 7.2rem;
     }
 
     &-part-wider-screen {
@@ -97,7 +97,6 @@
 
       @include atXlarge {
         width: 140px;
-        height: 8px;
       }
     }
   }
@@ -117,22 +116,22 @@
     }
 
     @include atXlarge {
-      margin-top: 2rem;
-      font-size: 4rem;
+      margin-top: 3rem;
+      font-size: 3.6rem;
     }
   }
 
   &__btn-mobile-larger {
     display: none;
 
-    @media (min-height: 400px) {
+    @media (min-height: 500px) {
       display: block;
     }
 
     @include atMedium {
       .btn {
-        font-size: 2.4rem;
-        padding: 1.8rem 3.4rem;
+        font-size: 2rem;
+        padding: 1.4rem 2.5rem;
       }
     }
   }
@@ -140,7 +139,7 @@
   &__phone-info {
     display: none;
 
-    @media (min-height: 400px) {
+    @media (min-height: 500px) {
       display: flex;
       margin: 1rem auto 0;
       justify-content: center;
@@ -153,24 +152,24 @@
   }
 
   &__phone-icon {
-    width: 37px;
-    height: 37px;
+    width: 32px;
+    height: 32px;
     margin-right: 15px;
 
     @include atMedium {
-      width: 45px;
-      height: 45px;
-      margin-right: 25px;
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
     }
   }
 
   &__phone-number {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 2px;
 
     @include atMedium {
-      font-size: 2.4rem;
+      font-size: 2rem;
     }
   }
 
@@ -207,62 +206,82 @@
     justify-content: space-between;
     align-items: center;
 
+    @include atSmall {
+      justify-content: space-around;
+    }
+
     @include atLarge {
       padding: 0 10px;
     }
   }
 
-  &__working-hours .working-hours {
+  &__working-hours {
     display: none;
 
     @include atMedium {
-      flex-grow: 1;
       display: flex;
-      letter-spacing: 1px;
+      flex-grow: 1;
     }
 
-    &__content {
-      margin-right: 0.5rem;
+    .working-hours {
+      display: flex;
 
-      @include atLarge {
-        margin-right: 2rem;
+      &__content {
+        margin-right: 0.7rem;
+
+        @include atLarge {
+          margin-right: 2rem;
+          letter-spacing: 1px;
+        }
+
+        @include atXlarge {
+          margin-right: 3rem;
+        }
       }
-    }
 
-    &__days {
-      margin: 0 0 1rem 0;
-      font-size: 1.6rem;
-
-      @include atLarge {
-        font-size: 1.8rem;
-      }
-
-      @include atXlarge {
-        font-size: 2.2rem;
-      }
-    }
-
-    &__hours {
-      margin: 0;
-      font-size: 1.2rem;
-
-      @include atLarge {
+      &__days {
+        margin: 0 0 1rem 0;
         font-size: 1.4rem;
+
+        @include atLarge {
+          font-size: 1.6rem;
+        }
+
+        @include atXlarge {
+          font-size: 1.8rem;
+        }
       }
 
-      @include atXlarge {
-        font-size: 1.8rem;
+      &__hours {
+        margin: 0;
+        font-size: 1.2rem;
+
+        @include atLarge {
+          font-size: 1.4rem;
+        }
+
+        @include atXlarge {
+          font-size: 1.6rem;
+        }
       }
     }
   }
 
   &__social-icons {
     width: 80px;
+    margin: auto;
 
     @include atSmaller {
       width: auto;
     }
 
+    @include atSmall {
+      margin: 0;
+    }
+
+    @include atMedium {
+      flex-grow: 1;
+    }
     @include atLarge {
       // margin-right: 2rem;
     }
