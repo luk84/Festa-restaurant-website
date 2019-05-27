@@ -1,0 +1,13 @@
+
+> festa@1.0.0 sass /home/lukasz/Desktop/Festa
+> node-sass -w scss/ -o dist/css/ --recursive --source-map=true --output-style=compressed "run" "prefix"
+
+=> changed: /home/lukasz/Desktop/Festa/scss/style.scss
+Rendering Complete, saving .css file...
+Wrote CSS to /home/lukasz/Desktop/Festa/dist/css/style.css
+Wrote Source Map to /home/lukasz/Desktop/Festa/dist/css/style.css.map
+=> changed: /home/lukasz/Desktop/Festa/scss/style.scss
+=> changed: /home/lukasz/Desktop/Festa/scss/style.scss
+Rendering Complete, saving .css file...
+Wrote Source Map to /home/lukasz/Desktop/Festa/dist/css/style.css.map
+Wrote CSS to /home/lukasz/Desktop/Festa/dist/css/style.css

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "prefix": "postcss dist/css/style.css --use=autoprefixer --output=dist/css/style.css"
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive --source-map=true --output-style=compressed",
+    "prefix": "postcss dist/css/style.css -o dist/css/style.css --use=autoprefixer --map=false"
   },
   "browserslist": [
     "last 2 versions"
