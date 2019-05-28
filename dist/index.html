@@ -27,10 +27,18 @@
       <img src="img/loader.gif" class="loader__img" alt="Loading..." />
     </div>
     <div class="preload">
-      <img src="img/hero-image.jpg" alt="bg preloaded image" />
-      <img src="img/hero-image2.jpg" alt="bg preloaded image" />
-      <img src="img/hero-image3.jpg" alt="bg preloaded image" />
-      <img src="img/hero-image4.jpg" alt="bg preloaded image" />
+        <picture>
+            <source srcset="img/hero-image2.jpg" media="(min-width: 1024px)" >
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Image">
+        </picture>
+        <picture>
+            <source srcset="img/hero-image3.jpg" media="(min-width: 1024px)" >
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Image">
+        </picture>
+        <picture>
+            <source srcset="img/hero-image4.jpg" media="(min-width: 1024px)" >
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Image">
+        </picture>
     </div>
     <header class="site-header">
       <div class="wrapper">
